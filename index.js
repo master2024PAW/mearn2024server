@@ -2,6 +2,11 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+const connectToMongoDB = require('./mongodb.connection'); // Zaimportuj moduł połączenia
+
+connectToMongoDB(); // Wywołaj funkcję połączenia
+
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
