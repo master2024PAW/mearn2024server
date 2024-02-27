@@ -6,7 +6,7 @@ const fileRoutes = require('./routes/file-upload-routes');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-const port = 3000
+const port = process.env.PORT || 3000
 
 const connectToMongoDB = require('./mongodb.connection'); // Zaimportuj moduł połączenia
 
