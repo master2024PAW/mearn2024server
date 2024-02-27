@@ -7,7 +7,7 @@ if (process.env.MONGODB_CERT) {
   cert = Buffer.from(process.env.MONGODB_CERT, 'base64').toString('utf-8');
 }
 
-const uri = process.env.MONGODB_URI; // Upewnij się, że masz zmienną środowiskową MONGODB_URI
+const uri = process.env.MONGODB_URI || 'mongodb+srv://cluster0.uzeo7xt.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority'; // Upewnij się, że masz zmienną środowiskową MONGODB_URI
 
 mongoose.set('strictQuery', false);
 
